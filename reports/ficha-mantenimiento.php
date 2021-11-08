@@ -116,7 +116,8 @@ class ImprimirFichaMantenimiento
                         $pdf->AddPage();
                         $htmlhead = '<h3 style="text-align:center;">SOPORTE INFORMÁTICO Y TELECOMUNICACIONES<br><i>Reporte de Servicio Técnico</i></h3>';
                         $pdf->writeHTMLCell(0, 0, -10, 27, $htmlhead, 0, 1, 0, true, 'L', true);
-                        $htmlhead = '<table cellpadding="2" cellspacing="1.5" class="block-1" style="text-align:center;"><tr>
+                        $htmlhead = '<table cellpadding="2" cellspacing="1.5" class="block-1" style="text-align:center;">
+                                <tr>
                                         <td style="text-align:center; width:485px;background-color:white;"></td>
                                         <td style="width:70px;background-color:white;
                                         border-top:    0.7px solid  #000000;
@@ -129,7 +130,8 @@ class ImprimirFichaMantenimiento
                                         border-right:  0.7px solid #000000;
                                         border-bottom: 0.7px solid #000000;
                                         background-color: #ffffff;"><p style="text-align: center;"><b>' . $fichMantEq["correlativo_Mant"] . '</b></p></td>
-                                        </tr></table>';
+                                </tr>
+                        </table>';
                         $pdf->writeHTMLCell(0, 0, 15, 27, $htmlhead, 0, 1, 0, true, 'L', true);
                         $htmlhead2 = '<br>';
                         $pdf->writeHTMLCell(0, 0, 15, 35, $htmlhead2, 0, 1, 0, true, 'L', true);
@@ -137,501 +139,500 @@ class ImprimirFichaMantenimiento
                         // fORMATEO DE CUERPO DE FICHA
                         $html = <<<EOF
                                 <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                                <tr>
-                                        <td style="width:300px;background-color:white;background-color: white;"><p style="text-align: left;"><b>1. DATOS DE LA SOLICITUD</b></p></td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:222.5px;background-color:white;
-                                        border-top: 0.7px solid #000000;
-                                        border-bottom: 0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Dirección/Oficina/Servicio</b></td>
-                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                        border-top: 0.7px solid #000000;
-                                        border-bottom: 0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Área y/o Ubicación Física</b></td>
-                                        <td style="text-align:left; width:222.5px;background-color:white;
-                                        border-top: 0.7px solid #000000;
-                                        border-bottom: 0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:   0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:222.5px;background-color:white;
-                                        border-bottom: 0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        background-color: #ffffff;"> $fichMantEq[area]</td>
-                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                        border-bottom: 0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        background-color: #ffffff;">  $fichMantEq[subarea]</td>
-                                        <td style="text-align:left; width:222.5px;background-color:white;
-                                        border-bottom: 0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:   0.7px solid  #000000;
-                                        background-color: #ffffff;">  $fichMantEq[responsable]</td>
-                                </tr>
+                                        <tr>
+                                                <td style="width:300px;background-color:white;background-color: white;"><p style="text-align: left;"><b>1. DATOS DE LA SOLICITUD</b></p></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-top: 0.7px solid #000000;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Dirección/Oficina/Servicio</b></td>
+                                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                                border-top: 0.7px solid #000000;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Área y/o Ubicación Física</b></td>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-top: 0.7px solid #000000;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:   0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"> $fichMantEq[area]</td>
+                                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;">  $fichMantEq[subarea]</td>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:   0.7px solid  #000000;
+                                                background-color: #ffffff;">  $fichMantEq[responsable]</td>
+                                        </tr>
                                 </table>
                                 <table cellpadding="2" cellspacing="1.5" style="text-align:left; padding:5px 10px;">
-                                <tr>
-                                        <td style="width:667.5px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Datos del Equipo Afectado :.</b> <i>(Información del equipo afectado: tipo,modelo,marca,serie,cod.Patrimonio,N° ID, etc.)</i></p></td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:85px;background-color:white;
+                                        <tr>
+                                                <td style="width:667.5px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Datos del Equipo Afectado :.</b> <i>(Información del equipo afectado: tipo,modelo,marca,serie,cod.Patrimonio,N° ID, etc.)</i></p></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:85px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        border-top:  0.7px solid  #000000;
+                                                        background-color: #E6E6E6;"> <b>N° ID Equipo:</b></td>
+                                                <td style="text-align:left; width:100px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:   0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        border-top:  0.7px solid  #000000;
+                                                        ">  $fichMantEq[nro_eq]</td>
+                                                <td style="text-align:left; width:110px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-top:  0.7px solid  #000000;
+                                                        background-color: #E6E6E6;"> <b>Tipo de Equipo:</b></td>
+                                                <td style="text-align:left; width:150px;background-color:white;
+                                                        border-top:  0.7px solid  #000000;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        ">  $fichMantEq[categoria]</td>
+                                                <td style="text-align:left; width:59px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-top:  0.7px solid  #000000;
+                                                        background-color: #E6E6E6;"> <b>N° Serie:</b></td>
+                                                <td style="text-align:left; width:159px;background-color:white;
+                                                        border-top:  0.7px solid  #000000;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        ">  $fichMantEq[serie]</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:100px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        background-color: #E6E6E6;"> <b>Cod. Patrimonio:</b></td>
+                                                <td style="text-align:left; width:145px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:   0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        "> $fichMantEq[sbn]</td>
+                                                <td style="text-align:left; width:60px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        background-color: #E6E6E6;"> <b>Marca:</b></td>
+                                                <td style="text-align:left; width:140px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        "> $fichMantEq[marca]</td>
+                                                <td style="text-align:left; width:59px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        background-color: #E6E6E6;"> <b>Modelo:</b></td>
+                                                <td style="text-align:left; width:159px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        "> $fichMantEq[modelo]</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:105px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Microprocesador:</b></td>
+                                                <td style="text-align:left; width:140px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[procesador] $fichMantEq[vprocesador]</td>
+                                                <td style="text-align:left; width:60px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                background-color: #E6E6E6;"> <b>RAM:</b></td>
+                                                <td style="text-align:left; width:140px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[ram]</td>
+                                                <td style="text-align:left; width:79px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                background-color: #E6E6E6;"> <b>Disco Duro:</b></td>
+                                                <td style="text-align:left; width:139px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[discoDuro]</td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                                <td style="text-align:center; width:667px;background-color:white;"></td>
+                                        </tr>
+                                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>2. EVALUACIÓN DE INCIDENTE, DIAGNOSTICOS Y ACCIONES REALIZADAS</b></p></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:85px;background-color:white;
                                                 border-bottom:0.7px solid #000000;
                                                 border-left:  0.7px solid  #000000;
                                                 border-top:  0.7px solid  #000000;
-                                                background-color: #E6E6E6;"> <b>N° ID Equipo:</b></td>
-                                        <td style="text-align:left; width:100px;background-color:white;
+                                                background-color: #E6E6E6;"> <b>F.Evaluación:</b></td>
+                                                <td style="text-align:left; width:65px;background-color:white;
                                                 border-bottom:0.7px solid #000000;
                                                 border-left:   0.7px solid  #000000;
                                                 border-right:  0.7px solid  #000000;
                                                 border-top:  0.7px solid  #000000;
-                                                ">  $fichMantEq[nro_eq]</td>
-                                        <td style="text-align:left; width:110px;background-color:white;
+                                                "> $fichMantEq[fEval]</td>
+                                                <td style="text-align:left; width:109.5px;background-color:white;
                                                 border-bottom:0.7px solid #000000;
                                                 border-top:  0.7px solid  #000000;
-                                                background-color: #E6E6E6;"> <b>Tipo de Equipo:</b></td>
-                                        <td style="text-align:left; width:150px;background-color:white;
-                                                border-top:  0.7px solid  #000000;
-                                                border-bottom:0.7px solid #000000;
-                                                border-left:  0.7px solid  #000000;
-                                                border-right:  0.7px solid  #000000;
-                                                ">  $fichMantEq[categoria]</td>
-                                        <td style="text-align:left; width:59px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                border-top:  0.7px solid  #000000;
-                                                background-color: #E6E6E6;"> <b>N° Serie:</b></td>
-                                        <td style="text-align:left; width:159px;background-color:white;
+                                                background-color: #E6E6E6;"> <b>Condición Inicial:</b></td>
+                                                <td style="text-align:left; width:65px;background-color:white;
                                                 border-top:  0.7px solid  #000000;
                                                 border-bottom:0.7px solid #000000;
                                                 border-left:  0.7px solid  #000000;
                                                 border-right:  0.7px solid  #000000;
-                                                ">  $fichMantEq[serie]</td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:100px;background-color:white;
+                                                "> $fichMantEq[cinicial]</td>
+                                                <td style="text-align:left; width:140px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Técnico Evaluador:</b></td>
+                                                <td style="text-align:left; width:198.5px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
                                                 border-bottom:0.7px solid #000000;
                                                 border-left:  0.7px solid  #000000;
-                                                background-color: #E6E6E6;"> <b>Cod. Patrimonio:</b></td>
-                                        <td style="text-align:left; width:145px;background-color:white;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[tecnico]</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:670.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Descripción Inicial de Incidente:</b></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:670.5px;background-color:white;
                                                 border-bottom:0.7px solid #000000;
                                                 border-left:   0.7px solid  #000000;
                                                 border-right:  0.7px solid  #000000;
-                                                "> $fichMantEq[sbn]</td>
-                                        <td style="text-align:left; width:60px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                background-color: #E6E6E6;"> <b>Marca:</b></td>
-                                        <td style="text-align:left; width:140px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                border-left:  0.7px solid  #000000;
-                                                border-right:  0.7px solid  #000000;
-                                                "> $fichMantEq[marca]</td>
-                                        <td style="text-align:left; width:59px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                background-color: #E6E6E6;"> <b>Modelo:</b></td>
-                                        <td style="text-align:left; width:159px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                border-left:  0.7px solid  #000000;
-                                                border-right:  0.7px solid  #000000;
-                                                "> $fichMantEq[modelo]</td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:105px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Microprocesador:</b></td>
-                                        <td style="text-align:left; width:140px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[procesador] $fichMantEq[vprocesador]</td>
-                                        <td style="text-align:left; width:60px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        background-color: #E6E6E6;"> <b>RAM:</b></td>
-                                        <td style="text-align:left; width:140px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[ram]</td>
-                                        <td style="text-align:left; width:79px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        background-color: #E6E6E6;"> <b>Disco Duro:</b></td>
-                                        <td style="text-align:left; width:139px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[discoDuro]</td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                <td style="text-align:center; width:667px;background-color:white;"></td>
-                                </tr>
-                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>2. EVALUACIÓN DE INCIDENTE, DIAGNOSTICOS Y ACCIONES REALIZADAS</b></p></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:85px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>F.Evaluación:</b></td>
-                                <td style="text-align:left; width:65px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        "> $fichMantEq[fEval]</td>
-                                <td style="text-align:left; width:109.5px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Condición Inicial:</b></td>
-                                <td style="text-align:left; width:65px;background-color:white;
-                                        border-top:  0.7px solid  #000000;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[cinicial]</td>
-                                <td style="text-align:left; width:140px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Técnico Evaluador:</b></td>
-                                <td style="text-align:left; width:198.5px;background-color:white;
-                                        border-top:  0.7px solid  #000000;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[tecnico]</td>
-                                </tr>
-
-                                <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Descripción Inicial de Incidente:</b></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[descInc]</td>
-                                </tr>
-                                <tr>
-                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Diágnosticos Realizados :.</b> <i>(Lista de Diagnosticos realizados)</i></p></td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> • $fichMantEq[d1]</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $d5</td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> $d2</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $d6</td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> $d3</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $d7</td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> $d4</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $d8</td>
-                                </tr>
+                                                "> $fichMantEq[descInc]</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Diágnosticos Realizados :.</b> <i>(Lista de Diagnosticos realizados)</i></p></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:334px;background-color:white;
+                                                background-color: #ffffff;"> • $fichMantEq[d1]</td>
+                                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                                background-color: #ffffff;"> $d5</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:334px;background-color:white;
+                                                background-color: #ffffff;"> $d2</td>
+                                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                                background-color: #ffffff;"> $d6</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:334px;background-color:white;
+                                                background-color: #ffffff;"> $d3</td>
+                                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                                background-color: #ffffff;"> $d7</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:334px;background-color:white;
+                                                background-color: #ffffff;"> $d4</td>
+                                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                                background-color: #ffffff;"> $d8</td>
+                                        </tr>
                                 </table> 
                                 EOF;
                         $pdf->writeHTML($html, false, false, false, false, '');
                         $html2 = <<<EOF
                                 <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                                <tr>
-                                <td style="width:669px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Tiempo de Ejecución del Servicio</b></p></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:85px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Fecha Inicio:</b></td>
-                                <td style="text-align:left; width:65px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        "> $fichMantEq[finic]</td>
-                                <td style="text-align:left; width:109.5px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Fecha Fin:</b></td>
-                                <td style="text-align:left; width:65px;background-color:white;
-                                        border-top:  0.7px solid  #000000;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[ffin]</td>
-                                <td style="text-align:left; width:140px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Trabajo Realizado:</b></td>
-                                <td style="text-align:left; width:198.5px;background-color:white;
-                                        border-top:  0.7px solid  #000000;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[tipoTrabajo]</td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Descripción de Primera Evaluación:</b></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[primera_eval]</td>
-                                </tr>
-                                <tr>
-                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Acciones Realizadas :.</b> <i>(Acciones o trabajos realizados)</i></p></td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> • $fichMantEq[a1]</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $a5</td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> $a2</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $a6</td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> $a3</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $a7</td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> $a4</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $a8</td>
-                                </tr>
+                                        <tr>
+                                                <td style="width:669px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Tiempo de Ejecución del Servicio</b></p></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:85px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Fecha Inicio:</b></td>
+                                                <td style="text-align:left; width:65px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                "> $fichMantEq[finic]</td>
+                                                <td style="text-align:left; width:109.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Fecha Fin:</b></td>
+                                                <td style="text-align:left; width:65px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[ffin]</td>
+                                                <td style="text-align:left; width:140px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Trabajo Realizado:</b></td>
+                                                <td style="text-align:left; width:198.5px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[tipoTrabajo]</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:670.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Descripción de Primera Evaluación:</b></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:670.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[primera_eval]</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Acciones Realizadas :.</b> <i>(Acciones o trabajos realizados)</i></p></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:334px;background-color:white;
+                                                background-color: #ffffff;"> • $fichMantEq[a1]</td>
+                                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                                background-color: #ffffff;"> $a5</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:334px;background-color:white;
+                                                background-color: #ffffff;"> $a2</td>
+                                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                                background-color: #ffffff;"> $a6</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:334px;background-color:white;
+                                                background-color: #ffffff;"> $a3</td>
+                                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                                background-color: #ffffff;"> $a7</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:334px;background-color:white;
+                                                background-color: #ffffff;"> $a4</td>
+                                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                                background-color: #ffffff;"> $a8</td>
+                                        </tr>
                                 </table> 
                                 EOF;
                         $pdf->writeHTML($html2, false, false, false, false, '');
                         $html3 = <<<EOF
                                 <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                                <tr>
-                                <td style="text-align:left; width:150px;background-color:white;
-                                        border-top:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Técnico Responsable:</b></td>
-                                <td style="text-align:left; width:519px;background-color:white;
-                                        border-top:0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[tecresponsable]</td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        border-top:0.7px solid #000000;
-                                        background-color: #E6E6E6;"> <b>Recomendaciones u Observaciones Finales:</b></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[recomendaciones]</td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:center; width:667px;background-color:white;"></td>
-                                </tr>
-                                <tr>
-                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>3. OBSERVACIONES Y ESTADO FINAL DEL EQUIPO</b> <i>(Información de situación final del equipo)</i></p></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:120px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Estado de Atención:</b></td>
-                                <td style="text-align:left; width:75px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        "> $fichMantEq[estAte]</td>
-                                <td style="text-align:left; width:109.5px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Condición Final:</b></td>
-                                <td style="text-align:left; width:90px;background-color:white;
-                                        border-top:  0.7px solid  #000000;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[cfinal]</td>
-                                <td style="text-align:left; width:200px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>¿Requiere Servicio de terceros?</b></td>
-                                <td style="text-align:left; width:68.5px;background-color:white;
-                                        border-top:  0.7px solid  #000000;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[servTerce]</td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:45px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Otros:</b></td>
-                                <td style="text-align:left; width:45px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[otros]</td>
-                                <td style="text-align:left; width:60px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        background-color: #E6E6E6;"> <b>Detalles:</b></td>
-                                <td style="text-align:left; width:516px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[obsOtros]</td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:center; width:667px;background-color:white;"></td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>4. SUSCRIPCION DEL ACTA</b> <i>(Firmas y sellos de usuario responsable,técnico evaluador y Oficina de Estadística e Informática)</i></p></td>
-                                </tr>
-                                <br>
-                                <td style="text-align:center; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>V°B° Of. Estadística e Informática</b></td>
-                                <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Técnico Responsable</b></td>
-                                <td style="text-align:center; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-bottom: 1px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-bottom: 1px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-bottom: 1px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #ffffff;"></td>
-                                </tr>
-                                <tr>
-                                <td style="text-align:center; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
-                                <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"><b>$fichMantEq[tecresponsable]</b></td>
-                                <td style="text-align:center; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
-                                </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:150px;background-color:white;
+                                                border-top:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Técnico Responsable:</b></td>
+                                                <td style="text-align:left; width:519px;background-color:white;
+                                                border-top:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[tecresponsable]</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:670.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                border-top:0.7px solid #000000;
+                                                background-color: #E6E6E6;"> <b>Recomendaciones u Observaciones Finales:</b></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:670.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[recomendaciones]</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:center; width:667px;background-color:white;"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>3. OBSERVACIONES Y ESTADO FINAL DEL EQUIPO</b> <i>(Información de situación final del equipo)</i></p></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:120px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Estado de Atención:</b></td>
+                                                <td style="text-align:left; width:75px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                "> $fichMantEq[estAte]</td>
+                                                <td style="text-align:left; width:109.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Condición Final:</b></td>
+                                                <td style="text-align:left; width:90px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[cfinal]</td>
+                                                <td style="text-align:left; width:200px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>¿Requiere Servicio de terceros?</b></td>
+                                                <td style="text-align:left; width:68.5px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[servTerce]</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:45px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Otros:</b></td>
+                                                <td style="text-align:left; width:45px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[otros]</td>
+                                                <td style="text-align:left; width:60px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                background-color: #E6E6E6;"> <b>Detalles:</b></td>
+                                                <td style="text-align:left; width:516px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[obsOtros]</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:center; width:667px;background-color:white;"></td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>4. SUSCRIPCION DEL ACTA</b> <i>(Firmas y sellos de usuario responsable,técnico evaluador y Oficina de Estadística e Informática)</i></p></td>
+                                        </tr>
+                                        <br>
+                                                <td style="text-align:center; width:222.5px;background-color:white;
+                                                border-top: 0.7px solid #000000;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>V°B° Of. Estadística e Informática</b></td>
+                                                <td style="text-align:center;vertical-align: middle; width:222.5px;     background-color:white;
+                                                border-top: 0.7px solid #000000;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Técnico Responsable</b></td>
+                                                <td style="text-align:center; width:222.5px;background-color:white;
+                                                border-top: 0.7px solid #000000;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:   0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-bottom: 1px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                                border-bottom: 1px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                                <td style="text-align:left; width:222.5px;background-color:white;
+                                                border-bottom: 1px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:   0.7px solid  #000000;
+                                                background-color: #ffffff;"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align:center; width:222.5px;background-color:white;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
+                                                <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                background-color: #ffffff;"><b>$fichMantEq[tecresponsable]</b></td>
+                                                <td style="text-align:center; width:222.5px;background-color:white;
+                                                border-bottom: 0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:   0.7px solid  #000000;
+                                                background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
+                                        </tr>
                                 </table> 
                                 EOF;
                         $pdf->writeHTML($html3, false, false, false, false, '');
@@ -739,20 +740,22 @@ class ImprimirFichaMantenimiento
                         $pdf->AddPage();
                         $htmlhead = '<h3 style="text-align:center;">SOPORTE INFORMÁTICO Y TELECOMUNICACIONES<br><i>Reporte de Servicio Técnico</i></h3>';
                         $pdf->writeHTMLCell(0, 0, -10, 27, $htmlhead, 0, 1, 0, true, 'L', true);
-                        $htmlhead = '<table cellpadding="2" cellspacing="1.5" class="block-1" style="text-align:center;"><tr>
-                        <td style="text-align:center; width:485px;background-color:white;"></td>
-                        <td style="width:70px;background-color:white;
-                        border-top:    0.7px solid  #000000;
-                        border-right:  0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"><p style="text-align: center;"><b>FICHA N°</b></p></td>
-                        <td style="width:91px;background-color:white;
-                        border-top:    0.7px solid  #000000;
-                        border-right:  0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        background-color: #ffffff;"><p style="text-align: center;"><b>' . $fichMantEq["correlativo_Mant"] . '</b></p></td>
-                        </tr></table>';
+                        $htmlhead = '<table cellpadding="2" cellspacing="1.5" class="block-1" style="text-align:center;">
+                                <tr>
+                                        <td style="text-align:center; width:485px;background-color:white;"></td>
+                                        <td style="width:70px;background-color:white;
+                                        border-top:    0.7px solid  #000000;
+                                        border-right:  0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"><p style="text-align: center;"><b>FICHA N°</b></p></td>
+                                        <td style="width:91px;background-color:white;
+                                        border-top:    0.7px solid  #000000;
+                                        border-right:  0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        background-color: #ffffff;"><p style="text-align: center;"><b>' . $fichMantEq["correlativo_Mant"] . '</b></p></td>
+                                </tr>
+                        </table>';
                         $pdf->writeHTMLCell(0, 0, 15, 27, $htmlhead, 0, 1, 0, true, 'L', true);
                         $htmlhead2 = '<br>';
                         $pdf->writeHTMLCell(0, 0, 15, 35, $htmlhead2, 0, 1, 0, true, 'L', true);
@@ -760,165 +763,164 @@ class ImprimirFichaMantenimiento
                         // fORMATEO DE CUERPO DE FICHA
                         $html = <<<EOF
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                        <tr>
-                                <td style="width:300px;background-color:white;background-color: white;"><p style="text-align: left;"><b>1. DATOS DE LA SOLICITUD</b></p></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Dirección/Oficina/Servicio</b></td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Área y/o Ubicación Física</b></td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"> $fichMantEq[area]</td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"> $fichMantEq[subarea]</td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #ffffff;"> $fichMantEq[responsable]</td>
-                        </tr>
+                                <tr>
+                                        <td style="width:300px;background-color:white;background-color: white;"><p style="text-align: left;"><b>1. DATOS DE LA SOLICITUD</b></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Dirección/Oficina/Servicio</b></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Área y/o Ubicación Física</b></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"> $fichMantEq[area]</td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"> $fichMantEq[subarea]</td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"> $fichMantEq[responsable]</td>
+                                </tr>
                         </table>
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left; padding:5px 10px;">
-                        <tr>
-                                <td style="width:667.5px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Datos del Equipo Afectado :.</b> <i>(Información del equipo afectado: tipo,modelo,marca,serie,cod.Patrimonio,N° ID, etc.)</i></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:85px;background-color:white;
+                                <tr>
+                                        <td style="width:667.5px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Datos del Equipo Afectado :.</b> <i>(Información del equipo afectado: tipo,modelo,marca,serie,cod.Patrimonio,N° ID, etc.)</i></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:85px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>N° ID Equipo:</b></td>
+                                        <td style="text-align:left; width:100px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                "> $fichMantEq[nro_eq]</td>
+                                        <td style="text-align:left; width:110px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Tipo de Equipo:</b></td>
+                                        <td style="text-align:left; width:150px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[categoria]</td>
+                                        <td style="text-align:left; width:59px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>N° Serie:</b></td>
+                                        <td style="text-align:left; width:159px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[serie]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:100px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        background-color: #E6E6E6;"> <b>Cod. Patrimonio:</b></td>
+                                        <td style="text-align:left; width:145px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:   0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        "> $fichMantEq[sbn]</td>
+                                        <td style="text-align:left; width:60px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        background-color: #E6E6E6;"> <b>Marca:</b></td>
+                                        <td style="text-align:left; width:140px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        "> $fichMantEq[marca]</td>
+                                        <td style="text-align:left; width:59px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        background-color: #E6E6E6;"> <b>Modelo:</b></td>
+                                        <td style="text-align:left; width:159px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        "> $fichMantEq[modelo]</td>
+                                </tr>
+                                <tr>
+                                <tr>
+                                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                                </tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>2. EVALUACIÓN DE INCIDENTE, DIAGNOSTICOS Y ACCIONES REALIZADAS</b></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:85px;background-color:white;
                                         border-bottom:0.7px solid #000000;
                                         border-left:  0.7px solid  #000000;
                                         border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>N° ID Equipo:</b></td>
-                        <td style="text-align:left; width:100px;background-color:white;
+                                        background-color: #E6E6E6;"> <b>F.Evaluación:</b></td>
+                                        <td style="text-align:left; width:65px;background-color:white;
                                         border-bottom:0.7px solid #000000;
                                         border-left:   0.7px solid  #000000;
                                         border-right:  0.7px solid  #000000;
                                         border-top:  0.7px solid  #000000;
-                                        "> $fichMantEq[nro_eq]</td>
-                        <td style="text-align:left; width:110px;background-color:white;
+                                        "> $fichMantEq[fEval]</td>
+                                        <td style="text-align:left; width:109.5px;background-color:white;
                                         border-bottom:0.7px solid #000000;
                                         border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Tipo de Equipo:</b></td>
-                        <td style="text-align:left; width:150px;background-color:white;
-                                        border-top:  0.7px solid  #000000;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[categoria]</td>
-                        <td style="text-align:left; width:59px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>N° Serie:</b></td>
-                        <td style="text-align:left; width:159px;background-color:white;
+                                        background-color: #E6E6E6;"> <b>Condición Inicial:</b></td>
+                                        <td style="text-align:left; width:65px;background-color:white;
                                         border-top:  0.7px solid  #000000;
                                         border-bottom:0.7px solid #000000;
                                         border-left:  0.7px solid  #000000;
                                         border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[serie]</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:100px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                border-left:  0.7px solid  #000000;
-                                                background-color: #E6E6E6;"> <b>Cod. Patrimonio:</b></td>
-                                <td style="text-align:left; width:145px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                border-left:   0.7px solid  #000000;
-                                                border-right:  0.7px solid  #000000;
-                                                "> $fichMantEq[sbn]</td>
-                                <td style="text-align:left; width:60px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                background-color: #E6E6E6;"> <b>Marca:</b></td>
-                                <td style="text-align:left; width:140px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                border-left:  0.7px solid  #000000;
-                                                border-right:  0.7px solid  #000000;
-                                                "> $fichMantEq[marca]</td>
-                                <td style="text-align:left; width:59px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                background-color: #E6E6E6;"> <b>Modelo:</b></td>
-                                <td style="text-align:left; width:159px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                border-left:  0.7px solid  #000000;
-                                                border-right:  0.7px solid  #000000;
-                                                "> $fichMantEq[modelo]</td>
-                        </tr>
-                        <tr>
-                        <tr>
-                        <td style="text-align:center; width:667px;background-color:white;"></td>
-                        </tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>2. EVALUACIÓN DE INCIDENTE, DIAGNOSTICOS Y ACCIONES REALIZADAS</b></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:85px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>F.Evaluación:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                "> $fichMantEq[fEval]</td>
-                        <td style="text-align:left; width:109.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Condición Inicial:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[cinicial]</td>
-                        <td style="text-align:left; width:140px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Técnico Evaluador:</b></td>
-                        <td style="text-align:left; width:198.5px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[tecnico]</td>
-                        </tr>
-
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Descripción Inicial de Incidente:</b></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[descInc]</td>
-                        </tr>
-                        <tr>
-                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Diágnosticos Realizados :.</b> <i>(Lista de Diagnosticos realizados)</i></p></td>
-                        </tr>
-                        <tr>
+                                        "> $fichMantEq[cinicial]</td>
+                                        <td style="text-align:left; width:140px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-top:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Técnico Evaluador:</b></td>
+                                        <td style="text-align:left; width:198.5px;background-color:white;
+                                        border-top:  0.7px solid  #000000;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[tecnico]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Descripción Inicial de Incidente:</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[descInc]</td>
+                                </tr>
+                                <tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Diágnosticos Realizados :.</b> <i>(Lista de Diagnosticos realizados)</i></p></td>
+                                </tr>
+                                <tr>
                                         <td style="text-align:left; width:334px;background-color:white;
                                         background-color: #ffffff;"> • $fichMantEq[d1]</td>
                                         <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
@@ -948,60 +950,60 @@ class ImprimirFichaMantenimiento
 
                         $html2 = <<<EOF
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                        <tr>
-                        <td style="width:669px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Tiempo de Ejecución del Servicio</b></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:85px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Fecha Inicio:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                "> $fichMantEq[finic]</td>
-                        <td style="text-align:left; width:109.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Fecha Fin:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[ffin]</td>
-                        <td style="text-align:left; width:140px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Trabajo Realizado:</b></td>
-                        <td style="text-align:left; width:198.5px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[tipoTrabajo]</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Descripción de Primera Evaluación:</b></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[primera_eval]</td>
-                        </tr>
-                        <tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Acciones Realizadas :.</b> <i>(Lista de acciones o trabajos realizados)</i></p></td>
-                        </tr>
-                        <tr>
+                                <tr>
+                                        <td style="width:669px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Tiempo de Ejecución del Servicio</b></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:85px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-top:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Fecha Inicio:</b></td>
+                                        <td style="text-align:left; width:65px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        border-top:  0.7px solid  #000000;
+                                        "> $fichMantEq[finic]</td>
+                                        <td style="text-align:left; width:109.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-top:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Fecha Fin:</b></td>
+                                        <td style="text-align:left; width:65px;background-color:white;
+                                        border-top:  0.7px solid  #000000;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[ffin]</td>
+                                        <td style="text-align:left; width:140px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-top:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Trabajo Realizado:</b></td>
+                                        <td style="text-align:left; width:198.5px;background-color:white;
+                                        border-top:  0.7px solid  #000000;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[tipoTrabajo]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Descripción de Primera Evaluación:</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[primera_eval]</td>
+                                </tr>
+                                <tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Acciones Realizadas :.</b> <i>(Lista de acciones o trabajos realizados)</i></p></td>
+                                </tr>
+                                <tr>
                                         <td style="text-align:left; width:334px;background-color:white;
                                         background-color: #ffffff;"> • $fichMantEq[a1]</td>
                                         <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
@@ -1030,203 +1032,203 @@ class ImprimirFichaMantenimiento
                         $pdf->writeHTML($html2, false, false, false, false, '');
                         $html3 = <<<EOF
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                        <tr>
-                        <td style="text-align:left; width:150px;background-color:white;
-                                border-top:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Técnico Responsable:</b></td>
-                        <td style="text-align:left; width:519px;background-color:white;
-                                border-top:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[tecresponsable]</td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:670.5px;background-color:white;
-                            border-bottom:0.7px solid #000000;
-                            border-left:  0.7px solid  #000000;
-                            border-right:  0.7px solid  #000000;
-                            border-top:0.7px solid #000000;
-                            background-color: #E6E6E6;"> <b>Recomendaciones u Observaciones Finales:</b></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:670.5px;background-color:white;
-                            border-bottom:0.7px solid #000000;
-                            border-left:   0.7px solid  #000000;
-                            border-right:  0.7px solid  #000000;
-                            "> $fichMantEq[recomendaciones]</td>
-                        </tr>
-                        <tr>
-                        <tr>
-                        <td style="text-align:center; width:667px;background-color:white;"></td>
-                        </tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>3. OBSERVACIONES Y ESTADO FINAL DEL EQUIPO</b> <i>(Información de situación final del equipo)</i></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:120px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Estado de Atención:</b></td>
-                        <td style="text-align:left; width:75px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                "> $fichMantEq[estAte]</td>
-                        <td style="text-align:left; width:109.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Condición Final:</b></td>
-                        <td style="text-align:left; width:90px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[cfinal]</td>
-                        <td style="text-align:left; width:200px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>¿Requiere Servicio de terceros?</b></td>
-                        <td style="text-align:left; width:68.5px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[servTerce]</td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:45px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Otros:</b></td>
-                        <td style="text-align:left; width:45px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[otros]</td>
-                        <td style="text-align:left; width:60px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                background-color: #E6E6E6;"> <b>Detalles:</b></td>
-                        <td style="text-align:left; width:516px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[obsOtros]</td>
-                        </tr>
-                        <br>
-                        <tr>
-                        <tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>4. SUSCRIPCION DEL ACTA</b> <i>(Firmas y sellos de usuario responsable,técnico evaluador y Oficina de Estadística e Informática)</i></p></td>
-                        </tr>
-                        <br>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-top: 0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"> <b>V°B° Of. Estadística e Informática</b></td>
-                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
-                        border-top: 0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"> <b>Técnico Responsable</b></td>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-top: 0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-bottom: 1px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-bottom: 1px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-bottom: 1px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
-                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"><b>$fichMantEq[tecresponsable]</b></td>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
-                        </tr>
+                                <tr>
+                                        <td style="text-align:left; width:150px;background-color:white;
+                                        border-top:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Técnico Responsable:</b></td>
+                                        <td style="text-align:left; width:519px;background-color:white;
+                                        border-top:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[tecresponsable]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        border-top:0.7px solid #000000;
+                                        background-color: #E6E6E6;"> <b>Recomendaciones u Observaciones Finales:</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[recomendaciones]</td>
+                                </tr>
+                                <tr>
+                                <tr>
+                                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                                </tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>3. OBSERVACIONES Y ESTADO FINAL DEL EQUIPO</b> <i>(Información de situación final del equipo)</i></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:120px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Estado de Atención:</b></td>
+                                        <td style="text-align:left; width:75px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                "> $fichMantEq[estAte]</td>
+                                        <td style="text-align:left; width:109.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Condición Final:</b></td>
+                                        <td style="text-align:left; width:90px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[cfinal]</td>
+                                        <td style="text-align:left; width:200px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>¿Requiere Servicio de terceros?</b></td>
+                                        <td style="text-align:left; width:68.5px;background-color:white;
+                                        border-top:  0.7px solid  #000000;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[servTerce]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:45px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Otros:</b></td>
+                                        <td style="text-align:left; width:45px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[otros]</td>
+                                        <td style="text-align:left; width:60px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        background-color: #E6E6E6;"> <b>Detalles:</b></td>
+                                        <td style="text-align:left; width:516px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[obsOtros]</td>
+                                </tr>
+                                <br>
+                                <tr>
+                                <tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>4. SUSCRIPCION DEL ACTA</b> <i>(Firmas y sellos de usuario responsable,técnico evaluador y Oficina de Estadística e Informática)</i></p></td>
+                                </tr>
+                                        <br>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>V°B° Of. Estadística e Informática</b></td>
+                                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Técnico Responsable</b></td>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 1px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-bottom: 1px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 1px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
+                                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"><b>$fichMantEq[tecresponsable]</b></td>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
+                                </tr>
                         </table> 
                         EOF;
                         $pdf->writeHTML($html3, false, false, false, false, '');
@@ -1335,20 +1337,22 @@ class ImprimirFichaMantenimiento
                         $pdf->AddPage();
                         $htmlhead = '<h3 style="text-align:center;">SOPORTE INFORMÁTICO Y TELECOMUNICACIONES<br><i>Reporte de Servicio Técnico</i></h3>';
                         $pdf->writeHTMLCell(0, 0, -10, 27, $htmlhead, 0, 1, 0, true, 'L', true);
-                        $htmlhead = '<table cellpadding="2" cellspacing="1.5" class="block-1" style="text-align:center;"><tr>
-                        <td style="text-align:center; width:485px;background-color:white;"></td>
-                        <td style="width:70px;background-color:white;
-                        border-top:    0.7px solid  #000000;
-                        border-right:  0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"><p style="text-align: center;"><b>FICHA N°</b></p></td>
-                        <td style="width:91px;background-color:white;
-                        border-top:    0.7px solid  #000000;
-                        border-right:  0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        background-color: #ffffff;"><p style="text-align: center;"><b>' . $fichMantEq["correlativo_Mant"] . '</b></p></td>
-                        </tr></table>';
+                        $htmlhead = '<table cellpadding="2" cellspacing="1.5" class="block-1" style="text-align:center;">
+                        <tr>
+                                <td style="text-align:center; width:485px;background-color:white;"></td>
+                                <td style="width:70px;background-color:white;
+                                border-top:    0.7px solid  #000000;
+                                border-right:  0.7px solid #000000;
+                                border-bottom: 0.7px solid #000000;
+                                border-left:   0.7px solid  #000000;
+                                background-color: #E6E6E6;"><p style="text-align: center;"><b>FICHA N°</b></p></td>
+                                <td style="width:91px;background-color:white;
+                                border-top:    0.7px solid  #000000;
+                                border-right:  0.7px solid #000000;
+                                border-bottom: 0.7px solid #000000;
+                                background-color: #ffffff;"><p style="text-align: center;"><b>' . $fichMantEq["correlativo_Mant"] . '</b></p></td>
+                        </tr>
+                        </table>';
                         $pdf->writeHTMLCell(0, 0, 15, 27, $htmlhead, 0, 1, 0, true, 'L', true);
                         $htmlhead2 = '<br>';
                         $pdf->writeHTMLCell(0, 0, 15, 35, $htmlhead2, 0, 1, 0, true, 'L', true);
@@ -1356,79 +1360,79 @@ class ImprimirFichaMantenimiento
                         // fORMATEO DE CUERPO DE FICHA
                         $html = <<<EOF
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                        <tr>
-                                <td style="width:300px;background-color:white;background-color: white;"><p style="text-align: left;"><b>1. DATOS DE LA SOLICITUD</b></p></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Dirección/Oficina/Servicio</b></td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Área y/o Ubicación Física</b></td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"> $fichMantEq[area]</td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"> $fichMantEq[subarea]</td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #ffffff;"> $fichMantEq[responsable]</td>
-                        </tr>
+                                <tr>
+                                        <td style="width:300px;background-color:white;background-color: white;"><p style="text-align: left;"><b>1. DATOS DE LA SOLICITUD</b></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Dirección/Oficina/Servicio</b></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Área y/o Ubicación Física</b></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"> $fichMantEq[area]</td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"> $fichMantEq[subarea]</td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"> $fichMantEq[responsable]</td>
+                                </tr>
                         </table>
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left; padding:5px 10px;">
                         <tr>
                                 <td style="width:667.5px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Datos del Equipo Afectado :.</b> <i>(Información del equipo afectado: tipo,modelo,marca,serie,cod.Patrimonio,N° ID, etc.)</i></p></td>
                         </tr>
                         <tr>
-                        <td style="text-align:left; width:85px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>N° ID Equipo:</b></td>
-                        <td style="text-align:left; width:100px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:   0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        "> $fichMantEq[nro_eq]</td>
-                        <td style="text-align:left; width:110px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Tipo de Equipo:</b></td>
-                        <td style="text-align:left; width:150px;background-color:white;
-                                        border-top:  0.7px solid  #000000;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[categoria]</td>
-                        <td style="text-align:left; width:59px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>N° Serie:</b></td>
-                        <td style="text-align:left; width:159px;background-color:white;
-                                        border-top:  0.7px solid  #000000;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[serie]</td>
+                                <td style="text-align:left; width:85px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>N° ID Equipo:</b></td>
+                                <td style="text-align:left; width:100px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                "> $fichMantEq[nro_eq]</td>
+                                <td style="text-align:left; width:110px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Tipo de Equipo:</b></td>
+                                <td style="text-align:left; width:150px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[categoria]</td>
+                                <td style="text-align:left; width:59px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>N° Serie:</b></td>
+                                <td style="text-align:left; width:159px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[serie]</td>
                         </tr>
                         <tr>
                                 <td style="text-align:left; width:100px;background-color:white;
@@ -1459,44 +1463,43 @@ class ImprimirFichaMantenimiento
                         </tr>
                         <tr>
                         <tr>
-                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                                <td style="text-align:center; width:667px;background-color:white;"></td>
                         </tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>2. EVALUACIÓN DE INCIDENTE, DIAGNOSTICOS Y ACCIONES REALIZADAS</b></p></td>
+                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>2. EVALUACIÓN DE INCIDENTE, DIAGNOSTICOS Y ACCIONES REALIZADAS</b></p></td>
                         </tr>
                         <tr>
-                        <td style="text-align:left; width:85px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>F.Evaluación:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                "> $fichMantEq[fEval]</td>
-                        <td style="text-align:left; width:109.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Condición Inicial:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[cinicial]</td>
-                        <td style="text-align:left; width:140px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Técnico Evaluador:</b></td>
-                        <td style="text-align:left; width:198.5px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[tecnico]</td>
+                                <td style="text-align:left; width:85px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-top:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>F.Evaluación:</b></td>
+                                <td style="text-align:left; width:65px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        border-top:  0.7px solid  #000000;
+                                        "> $fichMantEq[fEval]</td>
+                                <td style="text-align:left; width:109.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-top:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Condición Inicial:</b></td>
+                                <td style="text-align:left; width:65px;background-color:white;
+                                        border-top:  0.7px solid  #000000;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[cinicial]</td>
+                                <td style="text-align:left; width:140px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-top:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Técnico Evaluador:</b></td>
+                                <td style="text-align:left; width:198.5px;background-color:white;
+                                        border-top:  0.7px solid  #000000;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[tecnico]</td>
                         </tr>
-
                         <tr>
                                 <td style="text-align:left; width:670.5px;background-color:white;
                                 border-bottom:0.7px solid #000000;
@@ -1515,89 +1518,89 @@ class ImprimirFichaMantenimiento
                                 <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Diágnosticos Realizados :.</b> <i>(Lista de Diagnosticos realizados)</i></p></td>
                         </tr>
                         <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> • $fichMantEq[d1]</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $d5</td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> $d2</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $d6</td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> $d3</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $d7</td>
-                                </tr>
-                                <tr>
-                                        <td style="text-align:left; width:334px;background-color:white;
-                                        background-color: #ffffff;"> $d4</td>
-                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                        background-color: #ffffff;"> $d8</td>
-                                </tr>
+                                <td style="text-align:left; width:334px;background-color:white;
+                                background-color: #ffffff;"> • $fichMantEq[d1]</td>
+                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                background-color: #ffffff;"> $d5</td>
+                        </tr>
+                        <tr>
+                                <td style="text-align:left; width:334px;background-color:white;
+                                background-color: #ffffff;"> $d2</td>
+                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                background-color: #ffffff;"> $d6</td>
+                        </tr>
+                        <tr>
+                                <td style="text-align:left; width:334px;background-color:white;
+                                background-color: #ffffff;"> $d3</td>
+                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                background-color: #ffffff;"> $d7</td>
+                        </tr>
+                        <tr>
+                                <td style="text-align:left; width:334px;background-color:white;
+                                background-color: #ffffff;"> $d4</td>
+                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                background-color: #ffffff;"> $d8</td>
+                        </tr>
                         </table> 
                         EOF;
                         $pdf->writeHTML($html, false, false, false, false, '');
 
                         $html2 = <<<EOF
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                        <tr>
-                        <td style="width:669px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Tiempo de Ejecución del Servicio</b></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:85px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Fecha Inicio:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                "> $fichMantEq[finic]</td>
-                        <td style="text-align:left; width:109.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Fecha Fin:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[ffin]</td>
-                        <td style="text-align:left; width:140px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Trabajo Realizado:</b></td>
-                        <td style="text-align:left; width:198.5px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[tipoTrabajo]</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Descripción de Primera Evaluación:</b></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[primera_eval]</td>
-                        </tr>
-                        <tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Acciones Realizadas :.</b> <i>(Lista de acciones o trabajos realizados)</i></p></td>
-                        </tr>
-                        <tr>
+                                <tr>
+                                        <td style="width:669px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Tiempo de Ejecución del Servicio</b></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:85px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Fecha Inicio:</b></td>
+                                        <td style="text-align:left; width:65px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                "> $fichMantEq[finic]</td>
+                                        <td style="text-align:left; width:109.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Fecha Fin:</b></td>
+                                        <td style="text-align:left; width:65px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[ffin]</td>
+                                        <td style="text-align:left; width:140px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Trabajo Realizado:</b></td>
+                                        <td style="text-align:left; width:198.5px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[tipoTrabajo]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Descripción de Primera Evaluación:</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[primera_eval]</td>
+                                </tr>
+                                <tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Acciones Realizadas :.</b> <i>(Lista de acciones o trabajos realizados)</i></p></td>
+                                </tr>
+                                <tr>
                                         <td style="text-align:left; width:334px;background-color:white;
                                         background-color: #ffffff;"> • $fichMantEq[a1]</td>
                                         <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
@@ -1626,203 +1629,203 @@ class ImprimirFichaMantenimiento
                         $pdf->writeHTML($html2, false, false, false, false, '');
                         $html3 = <<<EOF
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                        <tr>
-                        <td style="text-align:left; width:150px;background-color:white;
-                                border-top:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Técnico Responsable:</b></td>
-                        <td style="text-align:left; width:519px;background-color:white;
-                                border-top:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[tecresponsable]</td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:670.5px;background-color:white;
-                            border-bottom:0.7px solid #000000;
-                            border-left:  0.7px solid  #000000;
-                            border-right:  0.7px solid  #000000;
-                            border-top:0.7px solid #000000;
-                            background-color: #E6E6E6;"> <b>Recomendaciones u Observaciones Finales:</b></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:670.5px;background-color:white;
-                            border-bottom:0.7px solid #000000;
-                            border-left:   0.7px solid  #000000;
-                            border-right:  0.7px solid  #000000;
-                            "> $fichMantEq[recomendaciones]</td>
-                        </tr>
-                        <tr>
-                        <tr>
-                        <td style="text-align:center; width:667px;background-color:white;"></td>
-                        </tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>3. OBSERVACIONES Y ESTADO FINAL DEL EQUIPO</b> <i>(Información de situación final del equipo)</i></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:120px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Estado de Atención:</b></td>
-                        <td style="text-align:left; width:75px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                "> $fichMantEq[estAte]</td>
-                        <td style="text-align:left; width:109.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Condición Final:</b></td>
-                        <td style="text-align:left; width:90px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[cfinal]</td>
-                        <td style="text-align:left; width:200px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>¿Requiere Servicio de terceros?</b></td>
-                        <td style="text-align:left; width:68.5px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[servTerce]</td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:45px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Otros:</b></td>
-                        <td style="text-align:left; width:45px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[otros]</td>
-                        <td style="text-align:left; width:60px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                background-color: #E6E6E6;"> <b>Detalles:</b></td>
-                        <td style="text-align:left; width:516px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[obsOtros]</td>
-                        </tr>
-                        <br>
-                        <tr>
-                        <tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>4. SUSCRIPCION DEL ACTA</b> <i>(Firmas y sellos de usuario responsable,técnico evaluador y Oficina de Estadística e Informática)</i></p></td>
-                        </tr>
-                        <br>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-top: 0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"> <b>V°B° Of. Estadística e Informática</b></td>
-                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
-                        border-top: 0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"> <b>Técnico Responsable</b></td>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-top: 0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-bottom: 1px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-bottom: 1px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-bottom: 1px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
-                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"><b>$fichMantEq[tecresponsable]</b></td>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
-                        </tr>
+                                <tr>
+                                        <td style="text-align:left; width:150px;background-color:white;
+                                                border-top:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Técnico Responsable:</b></td>
+                                        <td style="text-align:left; width:519px;background-color:white;
+                                                border-top:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[tecresponsable]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        border-top:0.7px solid #000000;
+                                        background-color: #E6E6E6;"> <b>Recomendaciones u Observaciones Finales:</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[recomendaciones]</td>
+                                </tr>
+                                <tr>
+                                <tr>
+                                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                                </tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>3. OBSERVACIONES Y ESTADO FINAL DEL EQUIPO</b> <i>(Información de situación final del equipo)</i></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:120px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Estado de Atención:</b></td>
+                                        <td style="text-align:left; width:75px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                "> $fichMantEq[estAte]</td>
+                                        <td style="text-align:left; width:109.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Condición Final:</b></td>
+                                        <td style="text-align:left; width:90px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[cfinal]</td>
+                                        <td style="text-align:left; width:200px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>¿Requiere Servicio de terceros?</b></td>
+                                        <td style="text-align:left; width:68.5px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[servTerce]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:45px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Otros:</b></td>
+                                        <td style="text-align:left; width:45px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[otros]</td>
+                                        <td style="text-align:left; width:60px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                background-color: #E6E6E6;"> <b>Detalles:</b></td>
+                                        <td style="text-align:left; width:516px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[obsOtros]</td>
+                                </tr>
+                                <br>
+                                <tr>
+                                <tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>4. SUSCRIPCION DEL ACTA</b> <i>(Firmas y sellos de usuario responsable,técnico evaluador y Oficina de Estadística e Informática)</i></p></td>
+                                </tr>
+                                        <br>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>V°B° Of. Estadística e Informática</b></td>
+                                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Técnico Responsable</b></td>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 1px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-bottom: 1px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 1px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
+                                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"><b>$fichMantEq[tecresponsable]</b></td>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
+                                </tr>
                         </table> 
                         EOF;
                         $pdf->writeHTML($html3, false, false, false, false, '');
@@ -1931,20 +1934,22 @@ class ImprimirFichaMantenimiento
                         $pdf->AddPage();
                         $htmlhead = '<h3 style="text-align:center;">SOPORTE INFORMÁTICO Y TELECOMUNICACIONES<br><i>Reporte de Servicio Técnico</i></h3>';
                         $pdf->writeHTMLCell(0, 0, -10, 27, $htmlhead, 0, 1, 0, true, 'L', true);
-                        $htmlhead = '<table cellpadding="2" cellspacing="1.5" class="block-1" style="text-align:center;"><tr>
-                        <td style="text-align:center; width:485px;background-color:white;"></td>
-                        <td style="width:70px;background-color:white;
-                        border-top:    0.7px solid  #000000;
-                        border-right:  0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"><p style="text-align: center;"><b>FICHA N°</b></p></td>
-                        <td style="width:91px;background-color:white;
-                        border-top:    0.7px solid  #000000;
-                        border-right:  0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        background-color: #ffffff;"><p style="text-align: center;"><b>' . $fichMantEq["correlativo_Mant"] . '</b></p></td>
-                        </tr></table>';
+                        $htmlhead = '<table cellpadding="2" cellspacing="1.5" class="block-1" style="text-align:center;">
+                        <tr>
+                                <td style="text-align:center; width:485px;background-color:white;"></td>
+                                <td style="width:70px;background-color:white;
+                                border-top:    0.7px solid  #000000;
+                                border-right:  0.7px solid #000000;
+                                border-bottom: 0.7px solid #000000;
+                                border-left:   0.7px solid  #000000;
+                                background-color: #E6E6E6;"><p style="text-align: center;"><b>FICHA N°</b></p></td>
+                                <td style="width:91px;background-color:white;
+                                border-top:    0.7px solid  #000000;
+                                border-right:  0.7px solid #000000;
+                                border-bottom: 0.7px solid #000000;
+                                background-color: #ffffff;"><p style="text-align: center;"><b>' . $fichMantEq["correlativo_Mant"] . '</b></p></td>
+                        </tr>
+                        </table>';
                         $pdf->writeHTMLCell(0, 0, 15, 27, $htmlhead, 0, 1, 0, true, 'L', true);
                         $htmlhead2 = '<br>';
                         $pdf->writeHTMLCell(0, 0, 15, 35, $htmlhead2, 0, 1, 0, true, 'L', true);
@@ -1952,463 +1957,462 @@ class ImprimirFichaMantenimiento
                         // fORMATEO DE CUERPO DE FICHA
                         $html = <<<EOF
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                        <tr>
-                                <td style="width:300px;background-color:white;background-color: white;"><p style="text-align: left;"><b>1. DATOS DE LA SOLICITUD</b></p></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Dirección/Oficina/Servicio</b></td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Área y/o Ubicación Física</b></td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-top: 0.7px solid #000000;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"> $fichMantEq[area]</td>
-                                <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                background-color: #ffffff;"> $fichMantEq[subarea]</td>
-                                <td style="text-align:left; width:222.5px;background-color:white;
-                                border-bottom: 0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:   0.7px solid  #000000;
-                                background-color: #ffffff;"> $fichMantEq[responsable]</td>
-                        </tr>
+                                <tr>
+                                        <td style="width:300px;background-color:white;background-color: white;"><p style="text-align: left;"><b>1. DATOS DE LA SOLICITUD</b></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Dirección/Oficina/Servicio</b></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Área y/o Ubicación Física</b></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"> $fichMantEq[area]</td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"> $fichMantEq[subarea]</td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"> $fichMantEq[responsable]</td>
+                                </tr>
                         </table>
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left; padding:5px 10px;">
-                        <tr>
-                                <td style="width:667.5px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Datos del Equipo Afectado :.</b> <i>(Información del equipo afectado: tipo,modelo,marca,serie,cod.Patrimonio,N° ID, etc.)</i></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:110px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>Tipo de Equipo:</b></td>
-                        <td style="text-align:left; width:200px;background-color:white;
-                                        border-top:  0.7px solid  #000000;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[categoria]</td>
-                        <td style="text-align:left; width:59px;background-color:white;
-                                        border-bottom:0.7px solid #000000;
-                                        border-top:  0.7px solid  #000000;
-                                        background-color: #E6E6E6;"> <b>N° Serie:</b></td>
-                        <td style="text-align:left; width:297px;background-color:white;
-                                        border-top:  0.7px solid  #000000;
-                                        border-bottom:0.7px solid #000000;
-                                        border-left:  0.7px solid  #000000;
-                                        border-right:  0.7px solid  #000000;
-                                        "> $fichMantEq[serie]</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:100px;background-color:white;
+                                <tr>
+                                        <td style="width:667.5px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Datos del Equipo Afectado :.</b> <i>(Información del equipo afectado: tipo,modelo,marca,serie,cod.Patrimonio,N° ID, etc.)</i></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:110px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-top:  0.7px solid  #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        background-color: #E6E6E6;"> <b>Tipo de Equipo:</b></td>
+                                        <td style="text-align:left; width:200px;background-color:white;
+                                                        border-top:  0.7px solid  #000000;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        "> $fichMantEq[categoria]</td>
+                                        <td style="text-align:left; width:59px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-top:  0.7px solid  #000000;
+                                                        background-color: #E6E6E6;"> <b>N° Serie:</b></td>
+                                        <td style="text-align:left; width:297px;background-color:white;
+                                                        border-top:  0.7px solid  #000000;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        "> $fichMantEq[serie]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:100px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        background-color: #E6E6E6;"> <b>Cod. Patrimonio:</b></td>
+                                        <td style="text-align:left; width:145px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:   0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        "> $fichMantEq[sbn]</td>
+                                        <td style="text-align:left; width:60px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        background-color: #E6E6E6;"> <b>Marca:</b></td>
+                                        <td style="text-align:left; width:140px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        "> $fichMantEq[marca]</td>
+                                        <td style="text-align:left; width:59px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        background-color: #E6E6E6;"> <b>Modelo:</b></td>
+                                        <td style="text-align:left; width:159px;background-color:white;
+                                                        border-bottom:0.7px solid #000000;
+                                                        border-left:  0.7px solid  #000000;
+                                                        border-right:  0.7px solid  #000000;
+                                                        "> $fichMantEq[modelo]</td>
+                                </tr>
+                                <tr>
+                                <tr>
+                                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                                </tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>2. EVALUACIÓN DE INCIDENTE, DIAGNOSTICOS Y ACCIONES REALIZADAS</b></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:85px;background-color:white;
                                                 border-bottom:0.7px solid #000000;
                                                 border-left:  0.7px solid  #000000;
-                                                background-color: #E6E6E6;"> <b>Cod. Patrimonio:</b></td>
-                                <td style="text-align:left; width:145px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>F.Evaluación:</b></td>
+                                        <td style="text-align:left; width:65px;background-color:white;
                                                 border-bottom:0.7px solid #000000;
                                                 border-left:   0.7px solid  #000000;
                                                 border-right:  0.7px solid  #000000;
-                                                "> $fichMantEq[sbn]</td>
-                                <td style="text-align:left; width:60px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                "> $fichMantEq[fEval]</td>
+                                        <td style="text-align:left; width:109.5px;background-color:white;
                                                 border-bottom:0.7px solid #000000;
-                                                background-color: #E6E6E6;"> <b>Marca:</b></td>
-                                <td style="text-align:left; width:140px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                border-left:  0.7px solid  #000000;
-                                                border-right:  0.7px solid  #000000;
-                                                "> $fichMantEq[marca]</td>
-                                <td style="text-align:left; width:59px;background-color:white;
-                                                border-bottom:0.7px solid #000000;
-                                                background-color: #E6E6E6;"> <b>Modelo:</b></td>
-                                <td style="text-align:left; width:159px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Condición Inicial:</b></td>
+                                        <td style="text-align:left; width:65px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
                                                 border-bottom:0.7px solid #000000;
                                                 border-left:  0.7px solid  #000000;
                                                 border-right:  0.7px solid  #000000;
-                                                "> $fichMantEq[modelo]</td>
-                        </tr>
-                        <tr>
-                        <tr>
-                        <td style="text-align:center; width:667px;background-color:white;"></td>
-                        </tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>2. EVALUACIÓN DE INCIDENTE, DIAGNOSTICOS Y ACCIONES REALIZADAS</b></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:85px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>F.Evaluación:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                "> $fichMantEq[fEval]</td>
-                        <td style="text-align:left; width:109.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Condición Inicial:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[cinicial]</td>
-                        <td style="text-align:left; width:140px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Técnico Evaluador:</b></td>
-                        <td style="text-align:left; width:198.5px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[tecnico]</td>
-                        </tr>
-
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Descripción Inicial de Incidente:</b></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[descInc]</td>
-                        </tr>
-                        <tr>
-                                <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Diágnosticos Realizados :.</b> <i>(Lista de Diagnosticos realizados)</i></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:334px;background-color:white;
-                        background-color: #ffffff;"> • $fichMantEq[d1]</td>
-                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                        background-color: #ffffff;"> $d5</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:334px;background-color:white;
-                                background-color: #ffffff;"> $d2</td>
-                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                background-color: #ffffff;"> $d6</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:334px;background-color:white;
-                                background-color: #ffffff;"> $d3</td>
-                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                background-color: #ffffff;"> $d7</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:334px;background-color:white;
-                                background-color: #ffffff;"> $d4</td>
-                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                background-color: #ffffff;"> $d8</td>
-                        </tr>
+                                                "> $fichMantEq[cinicial]</td>
+                                        <td style="text-align:left; width:140px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Técnico Evaluador:</b></td>
+                                        <td style="text-align:left; width:198.5px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[tecnico]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Descripción Inicial de Incidente:</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[descInc]</td>
+                                </tr>
+                                <tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Diágnosticos Realizados :.</b> <i>(Lista de Diagnosticos realizados)</i></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:334px;background-color:white;
+                                        background-color: #ffffff;"> • $fichMantEq[d1]</td>
+                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                        background-color: #ffffff;"> $d5</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:334px;background-color:white;
+                                        background-color: #ffffff;"> $d2</td>
+                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                        background-color: #ffffff;"> $d6</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:334px;background-color:white;
+                                        background-color: #ffffff;"> $d3</td>
+                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                        background-color: #ffffff;"> $d7</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:334px;background-color:white;
+                                        background-color: #ffffff;"> $d4</td>
+                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                        background-color: #ffffff;"> $d8</td>
+                                </tr>
                         </table> 
                         EOF;
                         $pdf->writeHTML($html, false, false, false, false, '');
 
                         $html2 = <<<EOF
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                        <tr>
-                        <td style="width:669px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Tiempo de Ejecución del Servicio</b></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:85px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Fecha Inicio:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                "> $fichMantEq[finic]</td>
-                        <td style="text-align:left; width:109.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Fecha Fin:</b></td>
-                        <td style="text-align:left; width:65px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[ffin]</td>
-                        <td style="text-align:left; width:140px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Trabajo Realizado:</b></td>
-                        <td style="text-align:left; width:198.5px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[tipoTrabajo]</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Descripción de Primera Evaluación:</b></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[primera_eval]</td>
-                        </tr>
-                        <tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Acciones Realizadas :.</b> <i>(Lista de acciones o trabajos realizados)</i></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:334px;background-color:white;
-                        background-color: #ffffff;"> • $fichMantEq[a1]</td>
-                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                        background-color: #ffffff;"> $a5</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:334px;background-color:white;
-                                background-color: #ffffff;"> $a2</td>
-                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                background-color: #ffffff;"> $a6</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:334px;background-color:white;
-                                background-color: #ffffff;"> $a3</td>
-                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                background-color: #ffffff;"> $a7</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:334px;background-color:white;
-                                background-color: #ffffff;"> $a4</td>
-                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                background-color: #ffffff;"> $a8</td>
-                        </tr>
+                                <tr>
+                                        <td style="width:669px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Tiempo de Ejecución del Servicio</b></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:85px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Fecha Inicio:</b></td>
+                                        <td style="text-align:left; width:65px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                "> $fichMantEq[finic]</td>
+                                        <td style="text-align:left; width:109.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Fecha Fin:</b></td>
+                                        <td style="text-align:left; width:65px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[ffin]</td>
+                                        <td style="text-align:left; width:140px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Trabajo Realizado:</b></td>
+                                        <td style="text-align:left; width:198.5px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[tipoTrabajo]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Descripción de Primera Evaluación:</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[primera_eval]</td>
+                                </tr>
+                                <tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>Acciones Realizadas :.</b> <i>(Lista de acciones o trabajos realizados)</i></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:334px;background-color:white;
+                                        background-color: #ffffff;"> • $fichMantEq[a1]</td>
+                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                        background-color: #ffffff;"> $a5</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:334px;background-color:white;
+                                        background-color: #ffffff;"> $a2</td>
+                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                        background-color: #ffffff;"> $a6</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:334px;background-color:white;
+                                        background-color: #ffffff;"> $a3</td>
+                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                        background-color: #ffffff;"> $a7</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:334px;background-color:white;
+                                        background-color: #ffffff;"> $a4</td>
+                                        <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
+                                        background-color: #ffffff;"> $a8</td>
+                                </tr>
                         </table> 
                         EOF;
                         $pdf->writeHTML($html2, false, false, false, false, '');
                         $html3 = <<<EOF
                         <table cellpadding="2" cellspacing="1.5" style="text-align:left;" border="">
-                        <tr>
-                        <td style="text-align:left; width:150px;background-color:white;
-                                border-top:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Técnico Responsable:</b></td>
-                        <td style="text-align:left; width:519px;background-color:white;
-                                border-top:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[tecresponsable]</td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                border-top:0.7px solid #000000;
-                                background-color: #E6E6E6;"> <b>Recomendaciones u Observaciones Finales:</b></td>
-                        </tr>
-                        <tr>
-                                <td style="text-align:left; width:670.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[recomendaciones]</td>
-                        </tr>
-                        <tr>
-                        <tr>
-                        <td style="text-align:center; width:667px;background-color:white;"></td>
-                        </tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>3. OBSERVACIONES Y ESTADO FINAL DEL EQUIPO</b> <i>(Información de situación final del equipo)</i></p></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:120px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Estado de Atención:</b></td>
-                        <td style="text-align:left; width:75px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                border-top:  0.7px solid  #000000;
-                                "> $fichMantEq[estAte]</td>
-                        <td style="text-align:left; width:109.5px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Condición Final:</b></td>
-                        <td style="text-align:left; width:90px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[cfinal]</td>
-                        <td style="text-align:left; width:200px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-top:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>¿Requiere Servicio de terceros?</b></td>
-                        <td style="text-align:left; width:68.5px;background-color:white;
-                                border-top:  0.7px solid  #000000;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[servTerce]</td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:45px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                background-color: #E6E6E6;"> <b>Otros:</b></td>
-                        <td style="text-align:left; width:45px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:   0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[otros]</td>
-                        <td style="text-align:left; width:60px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                background-color: #E6E6E6;"> <b>Detalles:</b></td>
-                        <td style="text-align:left; width:516px;background-color:white;
-                                border-bottom:0.7px solid #000000;
-                                border-left:  0.7px solid  #000000;
-                                border-right:  0.7px solid  #000000;
-                                "> $fichMantEq[obsOtros]</td>
-                        </tr>
-                        <br>
-                        <tr>
-                        <tr>
-                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>4. SUSCRIPCION DEL ACTA</b> <i>(Firmas y sellos de usuario responsable,técnico evaluador y Oficina de Estadística e Informática)</i></p></td>
-                        </tr>
-                        <br>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-top: 0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"> <b>V°B° Of. Estadística e Informática</b></td>
-                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
-                        border-top: 0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"> <b>Técnico Responsable</b></td>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-top: 0.7px solid #000000;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-bottom: 1px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
-                        border-bottom: 1px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        <td style="text-align:left; width:222.5px;background-color:white;
-                        border-bottom: 1px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"></td>
-                        </tr>
-                        <tr>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
-                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        background-color: #ffffff;"><b>$fichMantEq[tecresponsable]</b></td>
-                        <td style="text-align:center; width:222.5px;background-color:white;
-                        border-bottom: 0.7px solid #000000;
-                        border-left:   0.7px solid  #000000;
-                        border-right:   0.7px solid  #000000;
-                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
-                        </tr>
+                                <tr>
+                                        <td style="text-align:left; width:150px;background-color:white;
+                                                border-top:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Técnico Responsable:</b></td>
+                                        <td style="text-align:left; width:519px;background-color:white;
+                                                border-top:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[tecresponsable]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:  0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        border-top:0.7px solid #000000;
+                                        background-color: #E6E6E6;"> <b>Recomendaciones u Observaciones Finales:</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:670.5px;background-color:white;
+                                        border-bottom:0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:  0.7px solid  #000000;
+                                        "> $fichMantEq[recomendaciones]</td>
+                                </tr>
+                                <tr>
+                                <tr>
+                                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                                        </tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>3. OBSERVACIONES Y ESTADO FINAL DEL EQUIPO</b> <i>(Información de situación final del equipo)</i></p></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:120px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Estado de Atención:</b></td>
+                                        <td style="text-align:left; width:75px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                "> $fichMantEq[estAte]</td>
+                                        <td style="text-align:left; width:109.5px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Condición Final:</b></td>
+                                        <td style="text-align:left; width:90px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[cfinal]</td>
+                                        <td style="text-align:left; width:200px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-top:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>¿Requiere Servicio de terceros?</b></td>
+                                        <td style="text-align:left; width:68.5px;background-color:white;
+                                                border-top:  0.7px solid  #000000;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[servTerce]</td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:45px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                background-color: #E6E6E6;"> <b>Otros:</b></td>
+                                        <td style="text-align:left; width:45px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:   0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[otros]</td>
+                                        <td style="text-align:left; width:60px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                background-color: #E6E6E6;"> <b>Detalles:</b></td>
+                                        <td style="text-align:left; width:516px;background-color:white;
+                                                border-bottom:0.7px solid #000000;
+                                                border-left:  0.7px solid  #000000;
+                                                border-right:  0.7px solid  #000000;
+                                                "> $fichMantEq[obsOtros]</td>
+                                </tr>
+                                <br>
+                                <tr>
+                                <tr>
+                                        <td style="width:667px;background-color:white;background-color: white;"><p style="text-align: left;"><b>4. SUSCRIPCION DEL ACTA</b> <i>(Firmas y sellos de usuario responsable,técnico evaluador y Oficina de Estadística e Informática)</i></p></td>
+                                </tr>
+                                        <br>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>V°B° Of. Estadística e Informática</b></td>
+                                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Técnico Responsable</b></td>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-top: 0.7px solid #000000;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #E6E6E6;"> <b>Usuario Responsable</b></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 1px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-bottom: 1px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                        <td style="text-align:left; width:222.5px;background-color:white;
+                                        border-bottom: 1px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"></td>
+                                </tr>
+                                <tr>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
+                                        <td style="text-align:center;vertical-align: middle; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        background-color: #ffffff;"><b>$fichMantEq[tecresponsable]</b></td>
+                                        <td style="text-align:center; width:222.5px;background-color:white;
+                                        border-bottom: 0.7px solid #000000;
+                                        border-left:   0.7px solid  #000000;
+                                        border-right:   0.7px solid  #000000;
+                                        background-color: #ffffff;"><b>FIRMA/SELLO</b></td>
+                                </tr>
                         </table> 
                         EOF;
                         $pdf->writeHTML($html3, false, false, false, false, '');

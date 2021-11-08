@@ -37,311 +37,308 @@ class ImprimirFichaIntegracionEC
             $html =
                 <<<EOF
                 <table cellpadding="2" cellspacing="1.2" class="block-1" style="text-align:center;">
-                <tr>
-                    <td style="text-align:center; width:492px;background-color:white;"></td>
-                    <td style="width:160px;background-color:white;
-                    border-top:    1px solid  #000000;
-                    border-right:  1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"><p style="text-align: center;"><b>ID PC N°</b></p></td>
-                </tr>
-                <tr>
-                <td style="text-align:center; width:492px;background-color:white;"></td>
-                    <td style="width:160px;background-color:white;
-                    border-right:  1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;"><p style="text-align: center;"><b>$fichIntEC[nro_eq]</b></p></td>
-                </tr>
+                    <tr>
+                        <td style="text-align:center; width:492px;background-color:white;"></td>
+                        <td style="width:160px;background-color:white;
+                        border-top:    1px solid  #000000;
+                        border-right:  1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"><p style="text-align: center;"><b>ID PC N°</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:492px;background-color:white;"></td>
+                        <td style="width:160px;background-color:white;
+                        border-right:  1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;"><p style="text-align: center;"><b>$fichIntEC[nro_eq]</b></p></td>
+                    </tr>
                 </table>
-
                 <table cellpadding="1" cellspacing="1" style="text-align:left;" border="">
-                <tr>
-                    <td style="text-align:center; width:667px;background-color:white;"></td>
-                </tr>
+                    <tr>
+                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                    </tr>
                 </table>
-
                 <table cellpadding="2" cellspacing="1.2" style="text-align:left;" border="">
-                <tr>
-                    <td style="width:300px;background-color:white;
-                    background-color: white;"><p style="text-align: left;"><b>1. UBICACIÓN Y RESPONSABLE DEL EQUIPO</b></p></td>
-                </tr>
-                <tr>
-                    <td style="text-align:left; width:170px;background-color:white;
-                    background-color: white;"> OFICINA / DEPARTAMENTO :</td>
-                    <td style="text-align:left; width:270px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    ">$fichIntEC[departamento]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:left; width:169.8px;background-color:white;
-                    background-color: white;"> ÁREA / SERVICIO :</td>
-                    <td style="text-align:left; width:270px;background-color:white;
-                    border-bottom: 1px solid #000000;">$fichIntEC[servicio]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:left; width:169.8x;background-color:white;
-                    background-color: white;"> USUARIO RESPONSABLE :</td>
-                    <td style="text-align:left; width:270px;background-color:white;
-                    border-bottom: 1px solid #000000;"> $fichIntEC[nombRes] $fichIntEC[apellRes]</td>
-                </tr>
-
-                <tr>
-                    <td style="width:671px;background-color:white;
-                    background-color: white;"><p style="text-align: left;"><b>2. DATOS DEL ACTIVO</b></p></td>
-                </tr>
-                <tr>
-                    <td style="text-align:left; width:165px;background-color:white;
-                    background-color: white;"> FECHA DE ADQUISICIÓN :</td>
-                    <td style="text-align:left; width:100px;background-color:white;border-bottom: 1px solid #000000;
-                    "> $fichIntEC[fcomprapc]</td>
-                    <td style="text-align:left; width:140px;background-color:white;
-                    background-color: white;"> TIEMPO DE GARANTÍA :</td>
-                    <td style="text-align:left; width:70px;background-color:white;border-bottom: 1px solid #000000;
-                    "> $fichIntEC[garantiapc]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:left; width:165px;background-color:white;
-                    background-color: white;"> N° DE ORDEN DE COMPRA :</td>
-                    <td style="text-align:left; width:150px;background-color:white;border-bottom: 1px solid #000000;
-                    "> $fichIntEC[Ordenpc]</td>
-                    <td style="text-align:left; width:70px;background-color:white;
-                    background-color: white;"> ESTADO :</td>
-                    <td style="text-align:left; width:80px;background-color:white;border-bottom: 1px solid #000000;
-                    "> $fichIntEC[detaEstado]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:667px;background-color:white;"></td>
-                </tr>
-                <tr>
-                    <td style="width:671px;background-color:white;"><p style="text-align: center;"><b> Datos Generales del Equipo de Computo</b></p></td>
-                </tr>
-                <tr>
-                <td style="text-align:center; width:667px;background-color:white;"></td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>COMPONENTE</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>MARCA</b></td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>CAPACIDAD / VELOCIDAD</b></td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>MODELO</b></td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>SERIE</b></td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>COD. PATR</b></td>
-                    
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b>CASE</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[marcapc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b></b></td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[modelopc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[seriepc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[sbnpc]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b>PROCESADOR</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> INTEL</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[vprocesadorpc]</td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[procesadorpc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> </td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: white;"> </td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b>RAM</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[marcapc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[rampc]</td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> </td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> </td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: white;"> </td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b>DISCO DURO</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[marcapc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[ddpc]</td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> </td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> </td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: white;"> </td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b>MONITOR</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[marcamon]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b></b></td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[modelomon]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[seriemon]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[sbnmon]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b>TECLADO</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[marcatec]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b></b></td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[modelotec]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[serietec]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[sbntec]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b>F. ENERGIA</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[marcaAcu]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b></b></td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[modeloAcu]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[serieAcu]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[sbnAcu]</td>
-                </tr>
+                    <tr>
+                        <td style="width:300px;background-color:white;
+                        background-color: white;"><p style="text-align: left;"><b>1. UBICACIÓN Y RESPONSABLE DEL EQUIPO</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; width:170px;background-color:white;
+                        background-color: white;"> OFICINA / DEPARTAMENTO :</td>
+                        <td style="text-align:left; width:270px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        ">$fichIntEC[departamento]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; width:169.8px;background-color:white;
+                        background-color: white;"> ÁREA / SERVICIO :</td>
+                        <td style="text-align:left; width:270px;background-color:white;
+                        border-bottom: 1px solid #000000;">$fichIntEC[servicio]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; width:169.8x;background-color:white;
+                        background-color: white;"> USUARIO RESPONSABLE :</td>
+                        <td style="text-align:left; width:270px;background-color:white;
+                        border-bottom: 1px solid #000000;"> $fichIntEC[nombRes] $fichIntEC[apellRes]</td>
+                    </tr>
+                    <tr>
+                        <td style="width:671px;background-color:white;
+                        background-color: white;"><p style="text-align: left;"><b>2. DATOS DEL ACTIVO</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; width:165px;background-color:white;
+                        background-color: white;"> FECHA DE ADQUISICIÓN :</td>
+                        <td style="text-align:left; width:100px;background-color:white;border-bottom: 1px solid #000000;
+                        "> $fichIntEC[fcomprapc]</td>
+                        <td style="text-align:left; width:140px;background-color:white;
+                        background-color: white;"> TIEMPO DE GARANTÍA :</td>
+                        <td style="text-align:left; width:70px;background-color:white;border-bottom: 1px solid #000000;
+                        "> $fichIntEC[garantiapc]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; width:165px;background-color:white;
+                        background-color: white;"> N° DE ORDEN DE COMPRA :</td>
+                        <td style="text-align:left; width:150px;background-color:white;border-bottom: 1px solid #000000;
+                        "> $fichIntEC[Ordenpc]</td>
+                        <td style="text-align:left; width:70px;background-color:white;
+                        background-color: white;"> ESTADO :</td>
+                        <td style="text-align:left; width:80px;background-color:white;border-bottom: 1px solid #000000;
+                        "> $fichIntEC[detaEstado]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:671px;background-color:white;"><p style="text-align: center;"><b> Datos Generales del Equipo de Computo</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>COMPONENTE</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>MARCA</b></td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>CAPACIDAD / VELOCIDAD</b></td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>MODELO</b></td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>SERIE</b></td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>COD. PATR</b></td>
+                        
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b>CASE</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[marcapc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b></b></td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[modelopc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[seriepc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[sbnpc]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b>PROCESADOR</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> INTEL</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[vprocesadorpc]</td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[procesadorpc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> </td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: white;"> </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b>RAM</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[marcapc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[rampc]</td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> </td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> </td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: white;"> </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b>DISCO DURO</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[marcapc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[ddpc]</td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> </td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> </td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: white;"> </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b>MONITOR</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[marcamon]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b></b></td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[modelomon]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[seriemon]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[sbnmon]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b>TECLADO</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[marcatec]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b></b></td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[modelotec]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[serietec]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[sbntec]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b>F. ENERGIA</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[marcaAcu]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b></b></td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[modeloAcu]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[serieAcu]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[sbnAcu]</td>
+                    </tr>
                 </table>
             EOF;
             $pdf->writeHTML($html, false, false, false, false, '');
@@ -372,230 +369,227 @@ class ImprimirFichaIntegracionEC
             $html =
                 <<<EOF
                 <table cellpadding="2" cellspacing="1.2" class="block-1" style="text-align:center;">
-                <tr>
-                    <td style="text-align:center; width:492px;background-color:white;"></td>
-                    <td style="width:160px;background-color:white;
-                    border-top:    1px solid  #000000;
-                    border-right:  1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"><p style="text-align: center;"><b>ID PC N°</b></p></td>
-                </tr>
-                <tr>
-                <td style="text-align:center; width:492px;background-color:white;"></td>
-                    <td style="width:160px;background-color:white;
-                    border-right:  1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;"><p style="text-align: center;"><b>$fichIntEC[nro_eq]</b></p></td>
-                </tr>
+                    <tr>
+                        <td style="text-align:center; width:492px;background-color:white;"></td>
+                        <td style="width:160px;background-color:white;
+                        border-top:    1px solid  #000000;
+                        border-right:  1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"><p style="text-align: center;"><b>ID PC N°</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:492px;background-color:white;"></td>
+                        <td style="width:160px;background-color:white;
+                        border-right:  1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;"><p style="text-align: center;"><b>$fichIntEC[nro_eq]</b></p></td>
+                    </tr>
                 </table>
-
                 <table cellpadding="1" cellspacing="1" style="text-align:left;" border="">
-                <tr>
-                    <td style="text-align:center; width:667px;background-color:white;"></td>
-                </tr>
+                    <tr>
+                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                    </tr>
                 </table>
-
                 <table cellpadding="2" cellspacing="1.2" style="text-align:left;" border="">
-                <tr>
-                    <td style="width:300px;background-color:white;
-                    background-color: white;"><p style="text-align: left;"><b>1. UBICACIÓN Y RESPONSABLE DEL EQUIPO</b></p></td>
-                </tr>
-                <tr>
-                    <td style="text-align:left; width:170px;background-color:white;
-                    background-color: white;"> OFICINA / DEPARTAMENTO :</td>
-                    <td style="text-align:left; width:270px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    ">$fichIntEC[departamento]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:left; width:169.8px;background-color:white;
-                    background-color: white;"> ÁREA / SERVICIO :</td>
-                    <td style="text-align:left; width:270px;background-color:white;
-                    border-bottom: 1px solid #000000;">$fichIntEC[servicio]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:left; width:169.8x;background-color:white;
-                    background-color: white;"> USUARIO RESPONSABLE :</td>
-                    <td style="text-align:left; width:270px;background-color:white;
-                    border-bottom: 1px solid #000000;"> $fichIntEC[nombRes] $fichIntEC[apellRes]</td>
-                </tr>
-
-                <tr>
-                    <td style="width:671px;background-color:white;
-                    background-color: white;"><p style="text-align: left;"><b>2. DATOS DEL ACTIVO</b></p></td>
-                </tr>
-                <tr>
-                    <td style="text-align:left; width:165px;background-color:white;
-                    background-color: white;"> FECHA DE ADQUISICIÓN :</td>
-                    <td style="text-align:left; width:100px;background-color:white;border-bottom: 1px solid #000000;
-                    "> $fichIntEC[fcomprapc]</td>
-                    <td style="text-align:left; width:140px;background-color:white;
-                    background-color: white;"> TIEMPO DE GARANTÍA :</td>
-                    <td style="text-align:left; width:70px;background-color:white;border-bottom: 1px solid #000000;
-                    "> $fichIntEC[garantiapc]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:left; width:165px;background-color:white;
-                    background-color: white;"> N° DE ORDEN DE COMPRA :</td>
-                    <td style="text-align:left; width:150px;background-color:white;border-bottom: 1px solid #000000;
-                    "> $fichIntEC[Ordenpc]</td>
-                    <td style="text-align:left; width:70px;background-color:white;
-                    background-color: white;"> ESTADO :</td>
-                    <td style="text-align:left; width:80px;background-color:white;border-bottom: 1px solid #000000;
-                    "> $fichIntEC[detaEstado]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:667px;background-color:white;"></td>
-                </tr>
-                <tr>
-                    <td style="width:671px;background-color:white;"><p style="text-align: center;"><b> Datos Generales del Equipo de Computo</b></p></td>
-                </tr>
-                <tr>
-                <td style="text-align:center; width:667px;background-color:white;"></td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>COMPONENTE</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>MARCA</b></td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>CAPACIDAD / VELOCIDAD</b></td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>MODELO</b></td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>SERIE</b></td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-top: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: #E6E6E6;"> <b>COD. PATR</b></td>
-                    
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b>CASE</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[marcapc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b></b></td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[modelopc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[seriepc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[sbnpc]</td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b>PROCESADOR</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> INTEL</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[vprocesadorpc]</td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[procesadorpc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> </td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: white;"> </td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b>RAM</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[marcapc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[rampc]</td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> </td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> </td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: white;"> </td>
-                </tr>
-                <tr>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> <b>DISCO DURO</b></td>
-                    <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[marcapc]</td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> $fichIntEC[ddpc]</td>
-                    <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> </td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    background-color: white;"> </td>
-                    <td style="text-align:center; width:115px;background-color:white;
-                    border-bottom: 1px solid #000000;
-                    border-left:   1px solid  #000000;
-                    border-right:   1px solid  #000000;
-                    background-color: white;"> </td>
-                </tr>
+                    <tr>
+                        <td style="width:300px;background-color:white;
+                        background-color: white;"><p style="text-align: left;"><b>1. UBICACIÓN Y RESPONSABLE DEL EQUIPO</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; width:170px;background-color:white;
+                        background-color: white;"> OFICINA / DEPARTAMENTO :</td>
+                        <td style="text-align:left; width:270px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        ">$fichIntEC[departamento]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; width:169.8px;background-color:white;
+                        background-color: white;"> ÁREA / SERVICIO :</td>
+                        <td style="text-align:left; width:270px;background-color:white;
+                        border-bottom: 1px solid #000000;">$fichIntEC[servicio]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; width:169.8x;background-color:white;
+                        background-color: white;"> USUARIO RESPONSABLE :</td>
+                        <td style="text-align:left; width:270px;background-color:white;
+                        border-bottom: 1px solid #000000;"> $fichIntEC[nombRes] $fichIntEC[apellRes]</td>
+                    </tr>
+                    <tr>
+                        <td style="width:671px;background-color:white;
+                        background-color: white;"><p style="text-align: left;"><b>2. DATOS DEL ACTIVO</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; width:165px;background-color:white;
+                        background-color: white;"> FECHA DE ADQUISICIÓN :</td>
+                        <td style="text-align:left; width:100px;background-color:white;border-bottom: 1px solid #000000;
+                        "> $fichIntEC[fcomprapc]</td>
+                        <td style="text-align:left; width:140px;background-color:white;
+                        background-color: white;"> TIEMPO DE GARANTÍA :</td>
+                        <td style="text-align:left; width:70px;background-color:white;border-bottom: 1px solid #000000;
+                        "> $fichIntEC[garantiapc]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; width:165px;background-color:white;
+                        background-color: white;"> N° DE ORDEN DE COMPRA :</td>
+                        <td style="text-align:left; width:150px;background-color:white;border-bottom: 1px solid #000000;
+                        "> $fichIntEC[Ordenpc]</td>
+                        <td style="text-align:left; width:70px;background-color:white;
+                        background-color: white;"> ESTADO :</td>
+                        <td style="text-align:left; width:80px;background-color:white;border-bottom: 1px solid #000000;
+                        "> $fichIntEC[detaEstado]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:671px;background-color:white;"><p style="text-align: center;"><b> Datos Generales del Equipo de Computo</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:667px;background-color:white;"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>COMPONENTE</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>MARCA</b></td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>CAPACIDAD / VELOCIDAD</b></td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>MODELO</b></td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>SERIE</b></td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-top: 1px solid #000000;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: #E6E6E6;"> <b>COD. PATR</b></td>
+                        
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b>CASE</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[marcapc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b></b></td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[modelopc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[seriepc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[sbnpc]</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b>PROCESADOR</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> INTEL</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[vprocesadorpc]</td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[procesadorpc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> </td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: white;"> </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b>RAM</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[marcapc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[rampc]</td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> </td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> </td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: white;"> </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> <b>DISCO DURO</b></td>
+                        <td style="text-align: center; vertical-align: middle; width:90px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[marcapc]</td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> $fichIntEC[ddpc]</td>
+                        <td style="text-align:center;vertical-align: middle; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> </td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        background-color: white;"> </td>
+                        <td style="text-align:center; width:115px;background-color:white;
+                        border-bottom: 1px solid #000000;
+                        border-left:   1px solid  #000000;
+                        border-right:   1px solid  #000000;
+                        background-color: white;"> </td>
+                    </tr>
                 </table>
             EOF;
             $pdf->writeHTML($html, false, false, false, false, '');
