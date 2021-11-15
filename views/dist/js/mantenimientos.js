@@ -119,46 +119,46 @@ $("#modal-editar-mantenimiento").on('hidden.bs.modal', function (e) {
 });
 
 // Setting parameters
-$("#descIniEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#descIniEQ").val(rechange1);
-});
-$("#edescIniEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#edescIniEQ").val(rechange1);
-});
-$("#priEvaEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#priEvaEQ").val(rechange1);
-});
-$("#edpriEvaEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#edpriEvaEQ").val(rechange1);
-});
-$("#recoFEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#recoFEQ").val(rechange1);
-});
-$("#edrecoFEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#edrecoFEQ").val(rechange1);
-});
-$("#detalleOtros").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#detalleOtros").val(rechange1);
-});
-$("#eddetalleOtros").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#eddetalleOtros").val(rechange1);
-});
+// $("#descIniEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#descIniEQ").val(rechange1);
+// });
+// $("#edescIniEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#edescIniEQ").val(rechange1);
+// });
+// $("#priEvaEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#priEvaEQ").val(rechange1);
+// });
+// $("#edpriEvaEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#edpriEvaEQ").val(rechange1);
+// });
+// $("#recoFEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#recoFEQ").val(rechange1);
+// });
+// $("#edrecoFEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#edrecoFEQ").val(rechange1);
+// });
+// $("#detalleOtros").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#detalleOtros").val(rechange1);
+// });
+// $("#eddetalleOtros").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#eddetalleOtros").val(rechange1);
+// });
 // Cargar lista de series en base al tipo
 $("#tipEquipo").on("change", function () {
     $("#ofiEq1").prop("disabled", false);

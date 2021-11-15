@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
-$user = "adm-soporte";
-$pass = "jgRxPZ99**Qp&j8rkN6b";
+$user = "root";
+$pass = "";
 $db = "db-soporte-web";
 $conexion = mysqli_connect($server, $user, $pass, $db);
 mysqli_set_charset($conexion, "utf8");

@@ -115,46 +115,46 @@ $("#modal-editar-reposicion").on('hidden.bs.modal', function (e) {
 });
 
 // Setting parameters
-$("#descIniEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#descIniEQ").val(rechange1);
-});
-$("#edescIniEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#edescIniEQ").val(rechange1);
-});
-$("#priEvaEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#priEvaEQ").val(rechange1);
-});
-$("#edpriEvaEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#edpriEvaEQ").val(rechange1);
-});
-$("#recoFEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#recoFEQ").val(rechange1);
-});
-$("#edrecoFEQ").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#edrecoFEQ").val(rechange1);
-});
-$("#detalleOtros").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#detalleOtros").val(rechange1);
-});
-$("#eddetalleOtros").keydown(function () {
-    var diag = $(this).val();
-    var rechange1 = capitalizeFirstLetter(diag);
-    $("#eddetalleOtros").val(rechange1);
-});
+// $("#descIniEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#descIniEQ").val(rechange1);
+// });
+// $("#edescIniEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#edescIniEQ").val(rechange1);
+// });
+// $("#priEvaEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#priEvaEQ").val(rechange1);
+// });
+// $("#edpriEvaEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#edpriEvaEQ").val(rechange1);
+// });
+// $("#recoFEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#recoFEQ").val(rechange1);
+// });
+// $("#edrecoFEQ").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#edrecoFEQ").val(rechange1);
+// });
+// $("#detalleOtros").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#detalleOtros").val(rechange1);
+// });
+// $("#eddetalleOtros").keydown(function () {
+//     var diag = $(this).val();
+//     var rechange1 = capitalizeFirstLetter(diag);
+//     $("#eddetalleOtros").val(rechange1);
+// });
 
 // Setting parameters
 // $("#descIniEQ").keyup(function () {
@@ -3150,12 +3150,12 @@ $(".validaExisteEdt").on("change", function () {
                     icon: "warning",
                     title: "El Equipo seleccionado ya cuenta con Ficha de Reposición registrada " + respuesta["correlativo_Repo"],
                     showConfirmButton: false,
-                    timer: 1900
+                    timer: 7000
                 });
                 function redirect() {
                     window.location = "reposicion";
                 }
-                setTimeout(redirect, 1900);
+                setTimeout(redirect, 7000);
             }
         }
     });

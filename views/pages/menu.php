@@ -204,7 +204,7 @@
                     </li>';
                 }
                 ?>
-                <li class="nav-header">REPORTES</li>
+                <!-- <li class="nav-header">REPORTES</li> -->
             </ul>
         </nav>
     </div>

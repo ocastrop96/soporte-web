@@ -32,7 +32,7 @@
             <tr>
               <th style="width: 10px">#</th>
               <th>N° Ficha</th>
-              <th>F.Registro</th>
+              <th>F.Evaluación</th>
               <th>T.Equipo</th>
               <th>Serie</th>
               <th>Responsable</th>
@@ -532,7 +532,7 @@
               <div class="form-group">
                 <label for="edserieEQ">N° de Serie &nbsp;</label>
                 <i class="fas fa-desktop"></i> *
-                <select class="form-control" style="width: 100%;" name="edserieEQ" id="edserieEQ">
+                <select class="form-control select2" style="width: 100%;" name="edserieEQ" id="edserieEQ">
                   <option value="0" id="edserieEQ1">Seleccione tip EQ</option>
                 </select>
               </div>

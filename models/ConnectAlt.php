@@ -1,8 +1,8 @@
 <?php
 //db details
 $dbHost = 'localhost';
-$dbUsername = 'adm-soporte';
-$dbPassword = 'jgRxPZ99**Qp&j8rkN6b';
+$dbUsername = 'root';
+$dbPassword = '';
 $dbName = 'db-soporte-web';
 
 //Connect and select the database

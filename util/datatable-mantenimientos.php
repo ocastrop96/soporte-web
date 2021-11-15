@@ -49,7 +49,7 @@ class TablaMantenimiento
             $datos_json .= '[
                 "' . ($i + 1) . '",
                 "' . $mantenimiento[$i]["correlativo_Mant"] . '",
-                "' . $mantenimiento[$i]["fRegManto"] . '",
+                "' . $mantenimiento[$i]["fEval"] . '",
                 "' . $mantenimiento[$i]["categoria"] . '",
                 "' . $mantenimiento[$i]["serie"] . '",
                 "' . $mantenimiento[$i]["responsable"] . '",
