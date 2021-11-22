@@ -4,7 +4,7 @@ class ModeloUsuarios
 {
 	static public function mdlLoginUsuario($dato)
 	{
-		$stmt = Conexion::conectar()->prepare("CALL LOGIN_USUARIO(:cuenta)");
+		$stmt = Conexion::conectar()->prepare("CALL LoginUsuario(:cuenta)");
 		$stmt->bindParam(":cuenta", $dato, PDO::PARAM_STR);
 		$stmt->execute();
 		return $stmt->fetch();
@@ -23,7 +23,7 @@ class ModeloUsuarios
 	}
 	static public function mdlRegistroIntentos($dato)
 	{
-		$stmt = Conexion::conectar()->prepare("CALL INTENTOS_USUARIO(:id_usuario)");
+		$stmt = Conexion::conectar()->prepare("CALL RegistroIntentos(:id_usuario)");
 		$stmt->bindParam(":id_usuario", $dato, PDO::PARAM_STR);
 		$stmt->execute();
 		return $stmt->fetch();
@@ -39,7 +39,7 @@ class ModeloUsuarios
 			$stmt->execute();
 			return $stmt->fetch();
 		} else {
-			$stmt = Conexion::conectar()->prepare("CALL LISTADO_USUARIOS_SISTEMA()");
+			$stmt = Conexion::conectar()->prepare("CALL ListarUsuarios()");
 			$stmt->execute();
 			return $stmt->fetchAll();
 		}
