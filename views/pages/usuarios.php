@@ -131,9 +131,7 @@ if ($_SESSION["perfil"] != 1 && $_SESSION["perfil"] != 2 && $_SESSION["perfil"] 
                                     <select class="form-control" style="width: 100%;" id="perfilUsuario" name="perfilUsuario" required>
                                         <option value="">Seleccione el perfil del usuario</option>
                                         <?php
-                                        $itemPerfil = null;
-                                        $valorPerfil  = null;
-                                        $perfil = ControladorUsuarios::ctrListarPerfiles($itemPerfil, $valorPerfil);
+                                        $perfil = ControladorUsuarios::ctrListarPerfiles();
                                         foreach ($perfil as $key => $value) {
                                             echo '<option value="' . $value["id_perfil"] . '">' . $value["perfil"] . '</option>';
                                         }
@@ -260,9 +258,7 @@ if ($_SESSION["perfil"] != 1 && $_SESSION["perfil"] != 2 && $_SESSION["perfil"] 
                                     <select class="form-control" style="width: 100%;" name="edtperfilUsuario" id="edtperfilUsuario1" required>
                                         <option value="" id="edtperfilUsuario"></option>
                                         <?php
-                                        $itemPerfil2 = null;
-                                        $valorPerfil2  = null;
-                                        $perfil2 = ControladorUsuarios::ctrListarPerfiles($itemPerfil2, $valorPerfil2);
+                                        $perfil2 = ControladorUsuarios::ctrListarPerfiles();
                                         foreach ($perfil2 as $key => $value) {
                                             echo '<option value="' . $value["id_perfil"] . '">' . $value["perfil"] . '</option>';
                                         }
@@ -311,7 +307,6 @@ if ($_SESSION["perfil"] != 1 && $_SESSION["perfil"] != 2 && $_SESSION["perfil"] 
         </div>
     </div>
 </div>
-<!-- Llamar metodo de eliminar Usuario -->
 <?php
 $eliminarUsuario = new ControladorUsuarios();
 $eliminarUsuario->ctrEliminarUsuario();

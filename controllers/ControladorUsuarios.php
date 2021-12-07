@@ -131,10 +131,9 @@ class ControladorUsuarios
         return $respuesta;
     }
     // Mostrar Perfiles de Usuarios
-    static public function ctrListarPerfiles($item, $valor)
+    static public function ctrListarPerfiles()
     {
-        $tabla = "ws_perfiles";
-        $respuesta = ModeloUsuarios::mdlListaPerfiles($tabla, $item, $valor);
+        $respuesta = ModeloUsuarios::mdlListaPerfiles();
         return $respuesta;
     }
     // Registrar Usuarios

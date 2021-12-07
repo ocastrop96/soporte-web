@@ -66,18 +66,11 @@ class ModeloUsuarios
 	}
 
 	// Modelo para listar perfiles de usuarios
-	static public function mdlListaPerfiles($tabla, $item, $valor)
+	static public function mdlListaPerfiles()
 	{
-		if ($item != null) {
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
-			$stmt->bindParam(":" . $item, $valor, PDO::PARAM_STR);
-			$stmt->execute();
-			return $stmt->fetch();
-		} else {
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+			$stmt = Conexion::conectar()->prepare("CALL ListarPerfiles()");
 			$stmt->execute();
 			return $stmt->fetchAll();
-		}
 		//Cerramos la conexion por seguridad
 		$stmt->close();
 		$stmt = null;
