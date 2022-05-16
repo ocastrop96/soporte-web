@@ -327,25 +327,13 @@ class ImprimirFichaMantenimiento
                                                 <td style="text-align:left; width:334px;background-color:white;
                                                 background-color: #ffffff;"> • $fichMantEq[d1]</td>
                                                 <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                                background-color: #ffffff;"> $d5</td>
-                                        </tr>
-                                        <tr>
-                                                <td style="text-align:left; width:334px;background-color:white;
                                                 background-color: #ffffff;"> $d2</td>
-                                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                                background-color: #ffffff;"> $d6</td>
                                         </tr>
                                         <tr>
                                                 <td style="text-align:left; width:334px;background-color:white;
                                                 background-color: #ffffff;"> $d3</td>
                                                 <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                                background-color: #ffffff;"> $d7</td>
-                                        </tr>
-                                        <tr>
-                                                <td style="text-align:left; width:334px;background-color:white;
                                                 background-color: #ffffff;"> $d4</td>
-                                                <td style="text-align:left;vertical-align: middle; width:334.75px;background-color:white;
-                                                background-color: #ffffff;"> $d8</td>
                                         </tr>
                                 </table> 
                                 EOF;
